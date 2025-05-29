@@ -1,113 +1,100 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
-
-<!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-<meta name="description" content=""/>
-<title>Name</title>   
-
-<!-- Mobile Specifics -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="HandheldFriendly" content="true"/>
-<meta name="MobileOptimized" content="320"/>   
-
-<!-- Bootstrap -->
+<title>Name</title>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Main Style -->
 <link href="assets/css/main.css" rel="stylesheet">
-
-<!-- Responsive -->
 <link href="assets/css/responsive.css" rel="stylesheet">
-
-<!-- Google Font -->
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
-
-<!-- Fav Icon -->
-<link rel="shortcut icon" href="#">
-
-<link rel="apple-touch-icon" href="#">
-<link rel="apple-touch-icon" sizes="114x114" href="#">
-<link rel="apple-touch-icon" sizes="72x72" href="#">
-<link rel="apple-touch-icon" sizes="144x144" href="#">
-
-<!-- Modernizr -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,latin-ext,cyrillic' rel='stylesheet'>
 <script src="assets/js/modernizr.js"></script>
+<style>
+  #typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid orange;
+    animation: blink-caret .75s step-end infinite;
+  }
 
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+</style>
 </head>
-
-
 <body>
 
-<!-- Header -->
 <header>
-	<div class="container">
-    	<div class="row">
-        	<div class="span2">
-            	<div id="logo">
-        			<a href="index.html" title="NAME">home</a>
-        		</div>
-            </div>
-            <div class="span10">
-        		<nav id="menu">
-                    <ul id="menu-nav">
-			    			                            <li><a href="work.html">work</a></li>
-
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="contact.html">contact</a></li>
-                    </ul>
-                </nav>
-        	</div>
-        </div>
-    </div>
-</header>
-<!-- End Header -->
-
-<!-- Start Intro Box -->
-<section id="intro-box" class="margin-0">
-	<div class="container">
-        <div class="row">
-            <div class="span12">
-                <h3 class="center">Hi, I'm Cole. I'm a technical writer who does technical writing things. Welcome to my website!</h3>
-            </div> 
-        </div>
-    </div>
-</section>
-<!-- End Intro Box -->
-
-<!-- Start Section Portfolio Projects -->
-<section id="portfolio" class="container">
+  <div class="container">
     <div class="row">
-        <div id="portfolio-projects">
-            <ul id="projects">
-               
-            </ul>
+      <div class="span2">
+        <div id="logo">
+          <a href="index.html" title="NAME">home</a>
         </div>
+      </div>
+      <div class="span10">
+        <nav id="menu">
+          <ul id="menu-nav">
+            <li><a href="work.html">work</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-</section>
-<!-- End Section Portfolio Projects -->
+  </div>
+</header>
 
-<!-- Start Footer -->
-<footer class="footer-widgets">
-	<div class="container">
-    	<div class="row">
-         	<div class="span4 widget">
-            	<div class="about-widget">
-                    <h7>colematinzi@gmail.com</h7>
-                </div>
-            </div>
-             <div class="span8 widget">
-            	<div class="twitter-widget">
-                </div>	
-            </div>
-        </div>
+<section id="intro-box" class="margin-0">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h3 id="typewriter"></h3>
+      </div>
     </div>
+  </div>
+</section>
+
+<section id="portfolio" class="container">
+  <div class="row">
+    <div id="portfolio-projects">
+      <ul id="projects"></ul>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-widgets">
+  <div class="container">
+    <div class="row">
+      <div class="span4 widget">
+        <div class="about-widget">
+          <h7>colematinzi@gmail.com</h7>
+        </div>
+      </div>
+      <div class="span8 widget">
+        <div class="twitter-widget"></div>
+      </div>
+    </div>
+  </div>
 </footer>
-<!-- End Footer -->
+
+<script>
+  const text = "Hi, I'm Cole. I'm a technical writer who does technical writing things. Welcome to my website!";
+  const el = document.getElementById("typewriter");
+  let idx = 0;
+
+  function typeChar() {
+    if (idx < text.length) {
+      el.textContent += text.charAt(idx);
+      idx++;
+      setTimeout(typeChar, 30);
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", typeChar);
+</script>
 
 </body>
 </html>
