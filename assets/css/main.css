@@ -181,13 +181,14 @@ nav#menu #menu-nav li {
 }
 
 nav#menu #menu-nav li a {
-	color: #000;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 100px;
-	display: block;
-	letter-spacing: 0.2px;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100px;
+  display: block;
+  letter-spacing: 0.2px;
+  border-bottom: 2px solid royalblue;
 }
 
 nav#menu #menu-nav li:last-child {
