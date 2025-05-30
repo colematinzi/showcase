@@ -22,7 +22,7 @@ body{
 
 
 a{
-	color:#777;
+	color:#ADD8E6;
 	font-weight: 400;
 	text-decoration: none;
 	cursor: pointer;
@@ -37,7 +37,7 @@ a:hover,
 a:active,
 a:focus{
 	outline: 0;
-	color:#000;
+	color:royalblue;
 	text-decoration:none;
 }
 
