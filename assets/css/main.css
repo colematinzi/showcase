@@ -151,6 +151,7 @@ header #logo a {
 	font-weight: 500;
 	line-height: 100px;
 	letter-spacing: 2px;
+	border-bottom: 2px solid royalblue;
 }
 
 header #logo a:hover {
