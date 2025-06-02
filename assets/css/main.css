@@ -137,6 +137,15 @@ header {
 	align-items: center;
 }
 
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 100px;
+}
+
+
 header #logo {
 	display: flex;
 	align-items: center;
