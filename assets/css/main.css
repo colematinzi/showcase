@@ -148,7 +148,7 @@ header {
 
 header #logo {
 	display: flex;
-	align-items: center;
+	align-items: left;
 	height: 100%;
 	padding-left: 30px; /* Add to match nav item spacing */
 }
@@ -175,7 +175,7 @@ header #logo a:hover {
 nav#menu {
 	float: right;
 	display: flex;
-	align-items: center;
+	align-items: right;
 	height: 100%;
 }
 
@@ -183,7 +183,7 @@ nav#menu #menu-nav {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	align-items: center;
+	align-items: right;
 	height: 100%;
 }
 
@@ -192,7 +192,7 @@ nav#menu #menu-nav li {
 	list-style: none;
 	padding: 0 30px;
 	display: flex;
-	align-items: center;
+	align-items: right;
 	height: 100%;
 }
 
