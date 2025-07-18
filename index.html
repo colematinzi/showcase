@@ -26,6 +26,31 @@
     from, to { border-color: transparent }
     50% { border-color: royalblue; }
   }
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  font-family: 'Montserrat', sans-serif;
+}
+
+#intro-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Take full height */
+}
+
+header, footer, #portfolio {
+  display: none; /* Hide other sections if not needed */
+}
+
 </style>
 </head>
 <body>
