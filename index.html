@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Name</title>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="assets/css/main.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,latin-ext,cyrillic' rel='stylesheet'>
-<script src="assets/js/modernizr.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,latin-ext,cyrillic' rel='stylesheet'>
 <style>
   #typewriter {
     overflow: hidden;
@@ -26,8 +25,22 @@
     from, to { border-color: transparent }
     50% { border-color: royalblue; }
   }
-  
 
+  /* Email styling + animation */
+  #email {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  #email.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
 </head>
 <body>
@@ -36,8 +49,7 @@
   <div class="container">
     <div class="row">
       <div class="span2">
-<a href="index.html" title="NAME" style="color:#000; font-family:'Montserrat', sans-serif; font-size:16px; font-weight:500; letter-spacing:0.2px; padding-bottom:4px; border-bottom:2px solid royalblue; line-height:normal;">home</a>
-        
+        <a href="index.html" title="NAME" style="color:#000; font-family:'Montserrat', sans-serif; font-size:16px; font-weight:500; letter-spacing:0.2px; padding-bottom:4px; border-bottom:2px solid royalblue; line-height:normal;">home</a>
       </div>
       <div class="span10">
         <nav id="menu">
@@ -55,8 +67,9 @@
 <section id="intro-box" class="margin-0">
   <div class="container">
     <div class="row">
-      <div class="span12" style="display: flex; justify-content: center;">
+      <div class="span12" style="display: flex; flex-direction: column; align-items: center;">
         <h3 id="typewriter"></h3>
+        <span id="email">colematinzi@gmail.com</span>
       </div>
     </div>
   </div>
@@ -88,6 +101,7 @@
 <script>
   const text = "Hi, I'm Cole. I write things.";
   const el = document.getElementById("typewriter");
+  const emailEl = document.getElementById("email");
   let idx = 0;
 
   function typeChar() {
@@ -95,6 +109,11 @@
       el.textContent += text.charAt(idx);
       idx++;
       setTimeout(typeChar, 30);
+    } else {
+      // Show email after text finishes typing
+      setTimeout(() => {
+        emailEl.classList.add("show");
+      }, 300);
     }
   }
 
@@ -103,5 +122,6 @@
 
 </body>
 </html>
+
 
 
